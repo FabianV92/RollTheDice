@@ -1,0 +1,152 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: cursive;
+    color: #fff;
+}
+
+body {
+    display: grid;
+    grid-template-rows: repeat(10, 10vh);
+    grid-template-columns: repeat(10, 10vw);
+
+    background: url("../images/dicePic.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+
+.player-box0 {
+    display: grid;
+    grid-row-start: 2;
+    grid-row-end: 10;
+    grid-column-start: 2;
+    grid-column-end: 6;
+    display: flex;
+    flex-direction: column;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-color: #fab1a0;
+    justify-content: space-evenly;
+}
+
+.currentPointsDiv-0,
+.currentPointsDiv-1 {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+
+.currentPointsDiv-0 p,
+.currentPointsDiv-1 p {
+    color: rgb(25, 30, 30);
+    font-weight: bold;
+
+}
+
+.playerPointsTotal-0,
+.playerPointsTotal-1 {
+    padding-bottom: 100px;
+
+}
+
+.player-box0 h1,
+.player-box1 h1, p {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+
+.playerPointsTotal-0,
+.playerPointsTotal-1 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.player-box1 {
+    display: grid;
+    grid-row-start: 2;
+    grid-row-end: 10;
+    grid-column-start: 6;
+    grid-column-end: 10;
+    display: flex;
+    flex-direction: column;
+    background-color: #ff7b5c;
+    justify-content: space-evenly;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+#diceImgDiv {
+    grid-row-start: 4;
+    grid-column-start: 5;
+    grid-column-end: 7;
+    justify-self: center;
+}
+
+#diceImg {
+    width: 75px;
+}
+.boxTop-newGame {
+    grid-row-start: 2;
+    grid-row-end: 4;
+    grid-column-start: 5;
+    grid-column-end: 7;
+    justify-self: center;
+    align-self: center;
+}
+.boxBottom-hold {
+    grid-row-start: 9;
+    grid-row-end: 10;
+    grid-column-start: 5;
+    grid-column-end: 7;
+    justify-self: center;
+    align-self: center;
+}
+.boxBottom-rollDice {
+    grid-row-start: 8;
+    grid-row-end: 9;
+    grid-column-start: 5;
+    grid-column-end: 7;
+    justify-self: center;
+    align-self: center;
+}
+
+.boxBottom-hold button,
+.boxBottom-rollDice button,
+.boxTop-newGame button {
+    background-color: #ffffff;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    color: rgb(25,30,30);
+    min-width: 100px;
+}
+.boxBottom-hold button:hover,
+.boxBottom-rollDice button:hover,
+.boxTop-newGame button:hover {
+    cursor: pointer;
+    border: 2px solid rgb(25,30,30);
+}
+.playerWon0,
+.playerWon1 {
+    grid-row-start: 3;
+    font-size: 20px;
+    font-weight: bold;
+    justify-self: center;
+    align-self: self-end;
+}
+.playerWon0 {
+    grid-column-start: 3;
+    grid-column-end: 5;
+}
+.playerWon1 {
+    grid-column-start: 7;
+    grid-column-end: 9;
+}
+.hidden {
+display: none;
+}
