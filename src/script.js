@@ -11,6 +11,9 @@ const holdPoints = document.querySelector(".hold");
 const diceImg = document.getElementById("diceImg");
 const playerWontTxt0 = document.querySelector(".playerWon0");
 const playerWontTxt1 = document.querySelector(".playerWon1");
+const infoTextBox = document.querySelector(".info-box");
+const infoTextBoxBtn = document.querySelector(".info-button");
+const background = document.querySelector("body");
 
 // Start conditions
 payerTotalScoreEl0.textContent = 0;
@@ -22,10 +25,13 @@ let playerPointsTotal0 = 0;
 let playerPointsTotal1 = 0;
 let playerIsPlaying = true;
 
+
 // Hiding Elements when website opened
 diceImg.classList.add("hidden");
 playerWontTxt0.classList.add("hidden");
 playerWontTxt1.classList.add("hidden");
+infoTextBox.classList.add("hidden");
+
 
 // Changing player function and background of the current playing player
 const changingPlayer = function () {
@@ -40,6 +46,16 @@ const changingColor = function () {
         document.querySelector(".player-box1").style.backgroundColor = "#ff7b5c"
     }
 }
+
+// Function for the information how to play this game
+infoTextBoxBtn.addEventListener("click", function () {
+    // Toggles the info box when button is clicked
+    infoTextBox.classList.toggle("hidden");
+})
+// Function to close the InfoWindow if "ESC" key gets pressed
+document.addEventListener("keydown", function () {
+    infoTextBox.classList.add("hidden");
+})
 
 // Function roll the dice button
 rollDice.addEventListener('click', function () {
@@ -87,7 +103,7 @@ holdPoints.addEventListener('click', function () {
             : playerCurrentScoreEl1.textContent = playerPointsCurrent1;
         // If current points more than 100 then the players win
         //need to add after win players cant play anymore
-        if (playerPointsTotal0 > 20 || playerPointsTotal1 > 99) {
+        if (playerPointsTotal0 > 99 || playerPointsTotal1 > 99) {
             playerIsPlaying = false;
             document.querySelector(`.player-box${currentPlayer}`).style.backgroundColor = "#191e1e"
             document.querySelector(`.playerWon${currentPlayer}`).classList.remove("hidden");
