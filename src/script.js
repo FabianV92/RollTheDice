@@ -52,7 +52,7 @@ infoTextBoxBtn.addEventListener("click", function () {
     // Toggles the info box when button is clicked
     infoTextBox.classList.toggle("hidden");
 })
-// Function to close the InfoWindow if "ESC" key gets pressed
+// Function to close the InfoWindow if any key gets pressed
 document.addEventListener("keydown", function () {
     infoTextBox.classList.add("hidden");
 })
